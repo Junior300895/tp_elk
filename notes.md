@@ -46,4 +46,5 @@ POST /bank/_bulk?pretty
 { "account_number":49,"balance":29104,"firstname":"Fulton","lastname":"Holt","age":23,"gender":"F","address":"451 Humboldt Street","employer":"Anocha","email":"fultonholt@anocha.com","city":"Sunriver","state":"RI" }
 
 
-
+## liens intéressants
+https://openclassrooms.com/fr/courses/4462426-maitrisez-les-bases-de-donnees-nosql/6735351-entrainez-vous-a-extraire-lessence-dune-base-de-donnees
