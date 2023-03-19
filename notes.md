@@ -3,7 +3,7 @@
 - elasticsearch.bat
 - kibana.bat
 
-## récupération du TP
+## 1.  récupération du TP
 git clone -b step-00 https://github.com/zouheircadi/hol-elastic-devoxxfr.git
 
 ## création d'index
@@ -22,10 +22,10 @@ POST hol_devoxxfr_11/_bulk
 { "app_name" : "Diabetes:M", "category" : "MEDICAL", "last_updated" : "2018-07-31", "rating" : 4.6}   
 
 ## creation banque
-#
-POST /bank/_bulk?pretty
+## 2. TP BANQUE 
+POST bank/_bulk
 { "create":{ } }
-{ "account_number":1,"balance":39225,"firstname":"Amber","lastname":"Duke","age":32,"gender":"M","address":"880 Holmes Lane" "employer":"Pyrami","email":"amberduke@pyrami.com","city":"Brogan","state":"IL" }
+{ "account_number":1,"balance":39225,"firstname":"Amber","lastname":"Duke","age":32,"gender":"M","address":"880 Holmes Lane","employer":"Pyrami","email":"amberduke@pyrami.com","city":"Brogan","state":"IL" }
 { "create":{ } }
 { "account_number":6,"balance":5686,"firstname":"Hattie","lastname":"Bond","age":36,"gender":"M","address":"671 Bristol Street","employer":"Netagy","email":"hattiebond@netagy.com","city":"Dante","state":"TN" }
 { "create":{ } }
@@ -46,5 +46,10 @@ POST /bank/_bulk?pretty
 { "account_number":49,"balance":29104,"firstname":"Fulton","lastname":"Holt","age":23,"gender":"F","address":"451 Humboldt Street","employer":"Anocha","email":"fultonholt@anocha.com","city":"Sunriver","state":"RI" }
 
 
+
 ## liens intéressants
 https://openclassrooms.com/fr/courses/4462426-maitrisez-les-bases-de-donnees-nosql/6735351-entrainez-vous-a-extraire-lessence-dune-base-de-donnees
+
+https://www.elastic.co/guide/en/welcome-to-elastic/current/getting-started-general-purpose.html ==> tp bank
+
+https://www.elastic.co/fr/blog/how-to-keep-elasticsearch-synchronized-with-a-relational-database-using-logstash ==> chargement données sur elastic depuis une base de données mysql
