@@ -53,3 +53,5 @@ https://openclassrooms.com/fr/courses/4462426-maitrisez-les-bases-de-donnees-nos
 https://www.elastic.co/guide/en/welcome-to-elastic/current/getting-started-general-purpose.html ==> tp bank
 
 https://www.elastic.co/fr/blog/how-to-keep-elasticsearch-synchronized-with-a-relational-database-using-logstash ==> chargement données sur elastic depuis une base de données mysql
+
+https://www.linkedin.com/pulse/elasticsearch-partie-2-les-requ%C3%AAtes-ali-ibrahim-junior/ ==> requetes poussées sur elascticsearch
