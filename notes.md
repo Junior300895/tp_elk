@@ -46,6 +46,16 @@ POST bank/_bulk
 { "account_number":49,"balance":29104,"firstname":"Fulton","lastname":"Holt","age":23,"gender":"F","address":"451 Humboldt Street","employer":"Anocha","email":"fultonholt@anocha.com","city":"Sunriver","state":"RI" }
 
 
+## curl with certificate 
+Import-Certificate -FilePath "C:/Users/aliounebada.ndoye/Documents/work_dir/ELK/logstash-8.6.2/config/certs/http_ca.crt" -CertStoreLocation cert:\CurrentUser\Root
+OR
+Import-Certificate -FilePath "C:/Users/aliounebada.ndoye/Documents/work_dir/ELK/logstash-8.6.2/config/certs/http_ca.crt" -CertStoreLocation Cert:\LocalMachine\Root
+
+
+curl -XPUT --ssl-no-revoke -fL https://localhost:9200/_bulk -H "Content-Type: application/json" --data-binary @movies_elastic.json
+
+curl --user 'elastic:FgIe+2GRVYxfJWK-YT-b' --ssl-no-revoke -fL https://localhost:9200/_bulk -XPUT -H "Content-Type: application/json" --data-binary @movies_elastic.json
+
 
 ## liens intéressants
 https://openclassrooms.com/fr/courses/4462426-maitrisez-les-bases-de-donnees-nosql/6735351-entrainez-vous-a-extraire-lessence-dune-base-de-donnees
@@ -55,3 +65,5 @@ https://www.elastic.co/guide/en/welcome-to-elastic/current/getting-started-gener
 https://www.elastic.co/fr/blog/how-to-keep-elasticsearch-synchronized-with-a-relational-database-using-logstash ==> chargement données sur elastic depuis une base de données mysql
 
 https://www.linkedin.com/pulse/elasticsearch-partie-2-les-requ%C3%AAtes-ali-ibrahim-junior/ ==> requetes poussées sur elascticsearch
+
+https://learn.microsoft.com/en-us/powershell/module/pki/import-certificate?view=windowsserver2022-ps  ==> configuration curl with certificate

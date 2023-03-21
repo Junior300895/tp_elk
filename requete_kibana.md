@@ -46,6 +46,19 @@ GET bank/_search
   }
 }
 
+
+## GET DATA WITH operator (AND, OR)
+GET bank/_search
+{
+  "query": {
+    "query_string": {
+      "default_field": "address",
+      "query": "(282 AND Kings) OR Place"
+    }
+  }
+}
+
+
 # QUERY get all data 
 GET bank/_search
 {
