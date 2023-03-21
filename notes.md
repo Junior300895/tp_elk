@@ -51,14 +51,11 @@ Import-Certificate -FilePath "C:/Users/aliounebada.ndoye/Documents/work_dir/ELK/
 OR
 Import-Certificate -FilePath "C:/Users/aliounebada.ndoye/Documents/work_dir/ELK/logstash-8.6.2/config/certs/http_ca.crt" -CertStoreLocation Cert:\LocalMachine\Root
 
-
-curl -XPUT --ssl-no-revoke -fL https://localhost:9200/_bulk -H "Content-Type: application/json" --data-binary @movies_elastic.json
-
-curl --user 'elastic:FgIe+2GRVYxfJWK-YT-b' --ssl-no-revoke -fL https://localhost:9200/_bulk -XPUT -H "Content-Type: application/json" --data-binary @movies_elastic.json
-
+### Importation donnée format json avec la version sécurisée d'elasticsearch
+curl -XPOST -u elastic:junior --ssl-no-revoke "https://localhost:9200/_bulk" -H "Content-Type: application/json" --data-binary @movies_elastic.json 
 
 ## liens intéressants
-https://openclassrooms.com/fr/courses/4462426-maitrisez-les-bases-de-donnees-nosql/6735351-entrainez-vous-a-extraire-lessence-dune-base-de-donnees
+https://openclassrooms.com/fr/courses/4462426-maitrisez-les-bases-de-donnees-nosql/6735351-entrainez-vous-a-extraire-lessence-dune-base-de-donnees tp_movies
 
 https://www.elastic.co/guide/en/welcome-to-elastic/current/getting-started-general-purpose.html ==> tp bank
 
